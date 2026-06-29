@@ -1,0 +1,214 @@
+.navbar {
+    height: 45px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 9999;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 30px;
+
+    background: var(--background);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid var(--primary-second-color);
+
+    box-shadow: 0 2px 3px var(--primary-second-color);
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* ---------- Logo ---------- */
+
+.Xebialogo {
+    height: 150px;
+    width: 120px;
+    object-fit: contain;
+    padding-top: 5.5px;
+
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.Xebialogo:hover {
+    transform: scale(1.06);
+    opacity: 0.95;
+}
+
+/* ---------- Search ---------- */
+/* 
+.searchContainer {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 0 40px;
+}
+
+.searchInput {
+    width: 1120px;
+
+    padding: 8px 16px;
+
+    border: 1px solid #999;
+
+    border-radius: 8px;
+
+    font-size: 18px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.searchInput:focus {
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 0 0 3px rgba(139, 92, 246, 0.15);
+
+    transform: translateY(-1px);
+}
+
+.searchInput::placeholder {
+    text-align: center;
+
+    color: #777;
+} */
+
+/* ---------- Links ---------- */
+
+.themeButton{
+
+
+    color: var(--text-primary);
+
+    font-size: 1.3rem;
+
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.links {
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+}
+
+.links a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: var(--text-primary);
+
+    font-size: 1.2rem;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.links a:hover {
+    color: var(--primary-color);
+
+    transform: translateY(-2px);
+}
+
+/* Animated underline */
+
+.links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -4px;
+
+    width: 0%;
+    height: 2px;
+
+    background: var(--primary-second-color);
+
+    transition: width 0.3s ease;
+}
+
+.links a:hover::after {
+    width: 100%;
+}
+
+/* ---------- Button ---------- */
+
+.signupButton {
+    width: 85px;
+    height: 35px;
+    font-size: 0.9rem;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--primary-second-color)
+    );
+
+    color: var(--text-specials);
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 550;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.signupButton:hover {
+    opacity: 0.95;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 2px 10px var(--primary-second-color);
+}
+
+.signupButton:active {
+    transform: translateY(0px);
+}
+
+.navbar {
+    transform: translateY(-100%);
+    animation: slideDown 0.8s ease-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
