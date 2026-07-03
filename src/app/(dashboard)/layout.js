@@ -1,6 +1,5 @@
-export default function DashboardLayout({
-    children,
-}) {
-
-    return <>{children}</>;
+export default function DashboardPage() {
+    return (
+        <h1>Dashboard Coming Soon</h1>
+    );
 }
