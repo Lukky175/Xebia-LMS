@@ -10,15 +10,12 @@ export default function LoginPage() {
       const { theme } = useTheme();
   return (
     <section className={styles.loginSection}>
-      {/* Left Side: Login Form */}
+      {/* Right Side: Login Form */}
       <div className={styles.loginFormBox}>
         <div className={styles.loginFormValue}>
           <form>
             <Image
-                src={
-                    theme === "light"
-                        ? "/logo-light.png"
-                        : "/logo-dark.png"
+                src={"/logo-light.png"
                 }
                 alt="Xebia Logo"
                 width={200}

@@ -1,74 +1,86 @@
 "use client";
 
-import {
-    MdOutlineDarkMode,
-    MdOutlineLightMode
-} from "react-icons/md";
-
-import { useTheme }
-from "@/contexts/ThemeContext";
+import Link from "next/link";
 import Image from "next/image";
 
-// src/components/navbar/Navbar.jsx
-import Link from "next/link";
-import styles from "./Navbar.module.css";
+import {
+    MdOutlineDarkMode,
+    MdOutlineLightMode,
+} from "react-icons/md";
 
+import { useTheme } from "@/contexts/ThemeContext";
+
+import styles from "./Navbar.module.css";
 
 export default function Navbar() {
 
-    const {
-        theme,
-        toggleTheme
-    } = useTheme();
+    const { theme, toggleTheme } = useTheme();
 
     return (
         <nav className={styles.navbar}>
 
-            {/* Left Section */}
-            <Image
-                src={
-                    theme === "light"
-                        ? "/logo-light.png"
-                        : "/logo-dark.png"
-                }
-                alt="Xebia Logo"
-                width={140}
-                height={40}
-                className={styles.Xebialogo}
-            />
+            <div className={styles.container}>
 
-            {/* Middle Section, Ghansham sir asked to remove this */}
-            {/* <div className={styles.searchContainer}>
-                <input
-                    type="text"
-                    placeholder="Want to learn?"
-                    className={styles.searchInput}
-                />
-            </div> */}
-
-            {/* Right Section */}
-            <div className={styles.links}>
-
-                <button className={styles.themeButton} onClick={toggleTheme} >
-                    {
-                        theme === "light"
-                            ? <MdOutlineDarkMode />
-                            : <MdOutlineLightMode />
-                    }
-
-                </button>
-
-                <Link href="/login">Login</Link>
-
-                <Link href="/faq">
-                    FAQ's
+                {/* Left Section */}
+                <Link
+                    href="/"
+                    className={styles.logoContainer}
+                >
+                    <Image
+                        src={
+                            "/logo-light.png"
+                        }
+                        alt="Xebia Logo"
+                        width={140}
+                        height={40}
+                        className={styles.logo}
+                        priority
+                    />
                 </Link>
 
-                <Link href="/contact"> Contact </Link>
+                {/* Middle Section */}
+                <div className={styles.links}>
 
-                <button className={styles.signupButton}>
-                    SignUp
-                </button>
+                    <Link href="/">
+                        Home
+                    </Link>
+
+                    <Link href="/faq">
+                        FAQ
+                    </Link>
+
+                    <Link href="/contact">
+                        Contact Us
+                    </Link>
+
+                </div>
+
+                {/* Right Section */}
+                <div className={styles.actions}>
+
+                    <button
+                        className={styles.themeButton}
+                        onClick={toggleTheme}
+                    >
+                        {
+                            theme === "light"
+                                ? <MdOutlineDarkMode />
+                                : <MdOutlineLightMode />
+                        }
+                    </button>
+
+                    <span className={styles.divider}>
+                        |
+                    </span>
+
+                    <Link
+                        href="/login"
+                        className={styles.ctaButton}
+                    >
+                        Get Started
+                    </Link>
+
+                </div>
 
             </div>
 

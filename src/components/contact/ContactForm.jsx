@@ -11,8 +11,6 @@ import {
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { GoPencil } from "react-icons/go";
 
-import Image from "next/image";
-
 export default function ContactForm() {
     return (
         <>
@@ -228,97 +226,6 @@ export default function ContactForm() {
                 referrerPolicy="strict-origin-when-cross-origin">
                 </iframe>
             </section>
-
-
-            {/* FOOTER */}
-            <footer className={styles.footer}>
-
-                <div className={styles.footerContainer}>
-
-                    <div className={styles.footerBrand}>
-
-                        <Image
-                            src="/logo-light.png"
-                            width={180}
-                            height={80}
-                            alt="Xebia"
-                        />
-
-                        <p>
-                            Empowering organizations through
-                            cloud, DevOps, AI, and digital
-                            transformation.
-                        </p>
-
-                    </div>
-
-
-                    <div>
-
-                        <h4>Company</h4>
-
-                        <a href="/">Home</a>
-
-                        <a href="/about">
-                            About
-                        </a>
-
-                        <a href="/services">
-                            Services
-                        </a>
-
-                        <a href="/contact">
-                            Contact
-                        </a>
-
-                    </div>
-
-
-                    <div>
-
-                        <h4>Resources</h4>
-
-                        <a href="#">
-                            Careers
-                        </a>
-
-                        <a href="#">
-                            Privacy Policy
-                        </a>
-
-                        <a href="#">
-                            Terms
-                        </a>
-
-                    </div>
-
-
-                    <div>
-
-                        <h4>Get In Touch</h4>
-
-                        <p>
-                            Gurugram, Haryana
-                        </p>
-
-                        <p>
-                            +91 124 664 7000
-                        </p>
-
-                        <p>
-                            contact@xebia.com
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div className={styles.copyright}>
-                    © 2026 Xebia. All rights reserved.
-                </div>
-
-            </footer>
 
         </>
     );

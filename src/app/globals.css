@@ -21,8 +21,14 @@ body {
 
     --primary-color: #6c1d5f;
     --primary-second-color: #5b1e53;
+    --primary-tertiary-color: #793b74;
     /* --primary-light: #efa7ff;
     --primary-shadow: rgba(138, 1, 138, 0.25); */      /*Will implement later*/
+
+   /*Testimonial Gradient*/
+   --gradient1-xebia: #5b1e53;
+   --gradient2-xebia: #6c1d5f;
+
 
     /* ==========================================
        TEXT COLORS
@@ -37,7 +43,9 @@ body {
        ========================================== */
 
     --background: rgb(255, 255, 255);
-    --background-ui: rgb(108, 29, 95, 0.04);
+    --background-ui: rgba(108, 29, 95, 0.04);
+    --background-gradient1: rgba(255,255,255,.45);
+    --background-gradient2: rgba(255,255,255,.55);
 
     /* ==========================================
        BORDERS
@@ -62,8 +70,14 @@ body {
     --text-secondary: #d1d5db;
     --text-special: #000000;
 
-    --background: #000000;
-    --background-ui: rgb(27, 11, 26);
+   --background: #000000;
+   --background-ui: rgb(27, 11, 26);
+   --background-gradient1: rgba(0, 0, 0, 0.45);
+   --background-gradient2: rgba(0, 0, 0, 0.55);
+
+      /*Testimonial Gradient*/
+   --gradient1-xebia: #3b1838;
+   --gradient2-xebia: #291027;
     /* --background-card: #1e293b; */
 
     /* --border-primary: #bb86fc; */
