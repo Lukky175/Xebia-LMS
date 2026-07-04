@@ -21,8 +21,19 @@
  * ==========================================================
  */
 
-export default function DashboardPage() {
+/**
+ * ==========================================================
+ * Dashboard Route Group Layout
+ * ==========================================================
+ */
+
+export default function DashboardLayout({
+    children,
+}) {
+
     return (
-        <h1>Dashboard Coming Soon</h1>
+        <>
+            {children}
+        </>
     );
 }
