@@ -1,10 +1,44 @@
-// src/components/footer/Footer.jsx
+/**
+ * ==========================================================
+ * Author       : Lakshit Tyagi
+ * Organization : Xebia
+ * Project      : Xebia Learning Management System (LMS)
+ * File         : src/components/footer/Footer.jsx
+ *
+ * Purpose:
+ * Renders the global footer displayed across all
+ * public-facing pages of the application.
+ *
+ * Responsibilities:
+ * - Display company branding and mission statement.
+ * - Provide quick navigation links.
+ * - Surface helpful resources.
+ * - Show organization contact information.
+ * - Maintain responsive behaviour across devices.
+ *
+ * Notes:
+ * - Internal navigation uses Next.js Link components.
+ * - External resources are currently placeholders and
+ *   will be connected in future iterations.
+ * ==========================================================
+ */
 
 import Link from "next/link";
 import Image from "next/image";
 
 import styles from "./Footer.module.css";
 
+/**
+ * Footer Component
+ *
+ * @returns {JSX.Element}
+ * A reusable application footer containing:
+ * - Brand identity
+ * - Navigation links
+ * - Resource shortcuts
+ * - Contact information
+ * - Copyright notice
+ */
 export default function Footer() {
 
     return (
@@ -12,7 +46,7 @@ export default function Footer() {
         <footer className={styles.footer}>
 
             <div className={styles.footerContainer}>
-
+                {/* Brand identity and company mission statement. */}
                 <div className={styles.footerBrand}>
 
                     <Image
@@ -30,7 +64,7 @@ export default function Footer() {
 
                 </div>
 
-
+                {/* Internal navigation links for public pages. */}
                 <div>
 
                     <h4>Company</h4>
@@ -49,7 +83,8 @@ export default function Footer() {
 
                 </div>
 
-
+                {/* Helpful resources and learning materials.
+                    Links are placeholders for future pages. */}
                 <div>
 
                     <h4>Resources</h4>
@@ -68,7 +103,7 @@ export default function Footer() {
 
                 </div>
 
-
+                {/* Organization contact information. */}
                 <div>
 
                     <h4>Get In Touch</h4>
@@ -89,7 +124,8 @@ export default function Footer() {
 
             </div>
 
-
+            {/* Global copyright information displayed
+                at the bottom of every page. */}
             <div className={styles.copyright}>
                 © 2026 Xebia. All rights reserved.
             </div>

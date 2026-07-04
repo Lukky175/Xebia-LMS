@@ -1,3 +1,17 @@
+/**
+ * ==========================================================
+ * Purpose:
+ * Centralized source of FAQ content used by the
+ * FAQ component.
+ *
+ * Benefits:
+ * - Separates content from presentation logic.
+ * - Makes maintenance easier.
+ * - Allows future API integration without
+ *   modifying the UI component.
+ * ==========================================================
+ */
+
 export const faqItems = [
     {
         question: "Can I enroll in multiple courses at once?",

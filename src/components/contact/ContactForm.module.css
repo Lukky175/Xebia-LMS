@@ -1,6 +1,10 @@
-/* ==========================================
-   CHROME AUTOFILL FIX
-   ========================================== */
+/* ==========================================================
+   GLOBAL BROWSER FIXES
+   ========================================================== */
+
+/* Prevent Chrome from applying its default
+   yellow autofill background so inputs remain
+   consistent with the application's theme. */
 
 .inputBox input:-webkit-autofill,
 .inputBox input:-webkit-autofill:hover,
@@ -15,10 +19,12 @@
 
     caret-color: var(--text-primary);
 }
-
+/* ==========================================================
+   HERO SECTION
+   ========================================================== */
 .heroSection {
-    position: relative;   /* REQUIRED */
-    overflow: hidden;     /* REQUIRED */
+    position: relative;   /* Creates a positioning context for the decorative ::after gradient overlay. */
+    overflow: hidden;     /* Prevents the pseudo-element from overflowing outside the hero section. */
 
     height: 40vh;
 
@@ -39,6 +45,11 @@
     justify-content: center;
     align-items: center;
 }
+
+/* Decorative fade that creates a smooth
+   transition between the hero banner and
+   the main content section below. */
+
 .heroSection::after {
     content: "";
 
@@ -165,20 +176,8 @@
     line-height: 1.6;
 }
 
-.contactFormBox {
-    padding: 50px;
-
-    border-radius: 24px;
-
-    background: var(--background);
-
-    border: 2px solid
-        var(--primary-color);
-
-    box-shadow:
-        0 0 15px
-        var(--primary-second-color);
-}
+/* Glassmorphism-inspired form container
+   with subtle floating animation. */
 
 .contactFormBox {
     width: min(650px, 70vw);
@@ -189,13 +188,17 @@
 
     background: var(--background);
 
-    border: 2px solid var(--primary-color);
+    border: 2px solid
+        var(--primary-color);
 
     backdrop-filter: blur(15px);
 
-    box-shadow: 0 0 10px var(--primary-second-color);
+    box-shadow:
+        0 0 6px
+        var(--primary-second-color);
 
-    animation: float 3s ease-in-out infinite;
+    animation:
+        float 3s ease-in-out infinite;
 }
 
 .mapSection {
@@ -300,6 +303,12 @@
 
     pointer-events: none;
 }
+
+/* Floating labels move upward when the
+   input receives focus or contains text.
+   This depends on the placeholder-shown
+   pseudo-class, which requires an empty
+   placeholder value in JSX. */
 
 .inputBox input:focus ~ label,
 .inputBox input:not(:placeholder-shown) ~ label {
@@ -415,6 +424,9 @@
         var(--primary-color);
 }
 
+/* Creates a subtle floating effect for the
+   contact form container. */
+
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -429,6 +441,8 @@
     }
 }
 
+/* Fades content into view when the page loads. */
+
 @keyframes fadeIn {
     from {
         opacity: 0.3;
@@ -440,6 +454,9 @@
 }
 
 /* Mobile view*/
+/* ==========================================================
+   RESPONSIVE DESIGN
+   ========================================================== */
 @media (max-width: 768px) {
 
     .contactFormBox {

@@ -1,6 +1,13 @@
-/* ==========================================
-   CHROME AUTOFILL FIX
-   ========================================== */
+/* =====================================================
+   GLOBAL BROWSER FIXES
+   ===================================================== */
+
+/*
+    Prevent Chrome from applying its
+    default yellow autofill styling so
+    inputs remain consistent with the
+    active application theme.
+*/
 
 .inputBox input:-webkit-autofill,
 .inputBox input:-webkit-autofill:hover,
@@ -36,13 +43,13 @@
     justify-content: flex-end;
     align-items: center;
 
-    padding-right: 8.5vw;
+    padding-right: 11vw;
 
     background-image: url("/Login.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
+    overflow: hidden; /*Avoids Scrollable page*/
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -54,15 +61,17 @@
     loginFormBox
     ----------------------
     - Main white card container
-    - Glassmorphism effect (right now done white, backround = transparent;
+    - Glassmorphism-inspired card styling.
+    - Backdrop blur for visual depth
+    - Floating animation for subtle movement
     - Floating animation
     - Centered contents
     - Shadow for depth
 */
 .loginFormBox {
     position: relative;
-    width: min(460px, 90vw);
-    height: 630px;
+    width: min(445px, 90vw);
+    height: min(620px, 90vh);
     background: var(--background);
     border: 2px solid var(--primary-color);
     border-radius: 20px;
@@ -72,23 +81,24 @@
     align-items: center;
     animation: float 3s ease-in-out infinite;
     box-shadow: 0 0 10px var(--primary-second-color);
+    transform: translateY(40px);
 }
 
 .loginFormValue {
     width: 100%;
-    padding-left: 55px;
-    padding-right: 55px;
-    padding-bottom: 65px;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 10px;
 
 }
 
 .Xebialogo {
     display: block;
 
-    width: 210px;
-    height: 210px;
+    width: 200px;
+    height: auto;
 
-    margin: 0 auto -55px;
+    margin: 0 auto 10px;
 
     object-fit: contain;
 }
@@ -97,7 +107,7 @@
 /* Heading */
 .loginHeading {
     font-size: 2.1em;
-    margin-bottom: -10px;
+    margin-bottom: 0px;
     color: var(--text-primary);
     text-align: center;
 }
@@ -109,7 +119,7 @@
 
     color: var(--text-secondary);
 
-    margin-top: 10px;
+    margin-bottom: 30px;
 
     line-height: 1.5;
 }
@@ -140,18 +150,18 @@
 */
 .inputBox {
     position: relative;
-    margin: 45px 0;
+    margin: 30px 0;
     width: 100%;
-    border-bottom: 2px solid var(--primary-second-color);
+    border-bottom: 1.8px solid var(--primary-second-color);
 }
 
 .inputBox label {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 5px;
     transform: translateY(-50%);
     color: var(--text-primary);
-    font-size: 1.1em;
+    font-size: 1em;
     pointer-events: none;
     transition:
         top 0.25s ease,
@@ -216,10 +226,12 @@
         transform var(--transition-fast);
 }
 
-
+/* =====================================================
+   AUXILIARY AUTHENTICATION ACTIONS
+   ===================================================== */
 /* Remember Me & Forgot Password */
 .forget {
-    margin: -15px 0 15px;
+    margin: 45px 0 20px;
     font-size: 1em;
     color: var(--text-primary);
     display: flex;
@@ -240,7 +252,9 @@
     text-decoration: underline;
     color: var(--primary-second-color);
 }
-
+/* =====================================================
+   PRIMARY ACTION BUTTON
+   ===================================================== */
 /* Login Button */
 .loginButton {
     width: 100%;
@@ -254,7 +268,7 @@
     color: var(--text-specials);  /*Login Text*/
     font-weight: 600;
     transition: 0.3s;
-    box-shadow: 0 1 6px var(--primary-second-color);
+    box-shadow: 0 1px 6px var(--primary-second-color);
 }
 
 .loginButton:hover {
@@ -267,7 +281,7 @@
     font-size: 1em;
     color: var(--text-primary);
     text-align: center;
-    margin: 25px 0 10px;
+    margin: 20px 0 10px;
 }
 
 .signup p a {
@@ -298,15 +312,15 @@
 */
 @keyframes float {
     0% {
-        transform: translateY(0px);
+        transform: translateY(25px);
     }
 
     50% {
-        transform: translateY(3px);
+        transform: translateY(28px);
     }
 
     100% {
-        transform: translateY(0px);
+        transform: translateY(25px);
     }
 }
 
@@ -319,4 +333,22 @@
     to {
         opacity: 1;
     }
+}
+
+/* =====================================================
+   COPYRIGHT INFORMATION
+   ===================================================== */
+.loginFooter {
+    margin-top: 38px;
+
+    padding-top: 0px;
+
+    border-top:
+        1px solid rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+
+    font-size: 0.85rem;
+
+    color: var(--text-secondary);
 }

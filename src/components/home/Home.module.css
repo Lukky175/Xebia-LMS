@@ -2,6 +2,9 @@
    HERO
    ========================================== */
 
+/* Full-screen hero section with a
+   theme-aware gradient overlay to
+   improve text readability. */
 .heroSection {
     position: relative;
 
@@ -226,6 +229,8 @@
     transition: .3s;
 }
 
+/* Subtle elevation effect to reinforce
+   interactivity and visual hierarchy. */
 .featureCard:hover {
 
     transform:
@@ -278,6 +283,9 @@
    TESTIMONIAL
    ========================================== */
 
+   /* Gradient background distinguishes the
+      testimonial area from informational
+      content and draws user attention. */
 .testimonialSection {
 
     padding:
@@ -330,6 +338,9 @@
     border-radius: 50%;
 }
 
+/* Semi-transparent card using a
+   glassmorphism-inspired design. */
+   
 .quoteCard {
 
     background:

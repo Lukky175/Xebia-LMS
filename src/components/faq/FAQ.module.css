@@ -1,3 +1,7 @@
+/* ==========================================================
+   HERO SECTION
+   ========================================================== */
+
 .heroSection {
     position: relative;
     overflow: hidden;
@@ -22,7 +26,9 @@
     align-items: center;
 }
 
-/* Smooth fade into the page background */
+/* Decorative gradient that creates a smooth
+   transition between the hero banner and
+   the page background. */
 .heroSection::after {
     content: "";
 
@@ -66,6 +72,10 @@
 
     font-size: 1.1rem;
 }
+
+/* ==========================================================
+   FAQ CONTENT LAYOUT
+   ========================================================== */
 
 .faqSection {
     padding: 100px 8%;
@@ -122,6 +132,10 @@
 
     line-height: 1.8;
 }
+
+/* ==========================================================
+   ACCORDION COMPONENTS
+   ========================================================== */
 
 .rightContent {
     display: flex;
@@ -204,6 +218,10 @@
     flex-shrink: 0;
 }
 
+/* Accordion animation is achieved by
+   transitioning max-height between
+   collapsed and expanded states. */
+
 .answerWrapper {
 
     max-height: 0;
@@ -230,6 +248,10 @@
 
     line-height: 1.8;
 }
+
+/************************************************************
+   CALL TO ACTION
+*************************************************************/
 
 .helpSection {
 
@@ -291,6 +313,10 @@
         translateY(-2px);
 }
 
+/* ==========================================================
+   RESPONSIVE DESIGN
+   ========================================================== */
+   
 @media (max-width: 900px) {
 
     .faqGrid {

@@ -1,3 +1,20 @@
+/* =====================================================
+   GLOBAL NAVIGATION LAYOUT
+   ===================================================== */
+
+/*
+    Navbar Design Principles
+    ------------------------
+    - Fixed positioning keeps navigation
+      accessible throughout the user journey.
+
+    - Backdrop blur improves readability
+      over dynamic page content.
+
+    - High z-index ensures the navigation
+      remains above all page sections.
+*/
+
 .navbar {
 
     position: fixed;
@@ -30,6 +47,14 @@
     align-items: center; 
 }
 
+/*
+    Three-column grid layout:
+
+    [ Logo ] [ Navigation Links ] [ Actions ]
+
+    Fixed-width side columns maintain
+    visual balance across large screens.
+*/
 .container {
 
     max-width: 1400px;
@@ -46,10 +71,13 @@
     grid-template-columns: 180px 1fr 220px;
 
     align-items: center;
-    transform: translateY(0 px);
+    transform: translateY(0px);
 }
 
 /* ---------- Logo ---------- */
+/* =====================================================
+   BRANDING
+   ===================================================== */
 
 .logoContainer {
 
@@ -75,6 +103,9 @@
 }
 
 /* ---------- Center Links ---------- */
+/* =====================================================
+   PRIMARY NAVIGATION LINKS
+   ===================================================== */
 
 .links {
 
@@ -112,6 +143,11 @@
 /* ==========================================
    Animated Underline
    ========================================== */
+   /*
+    Uses a pseudo-element to create
+    a smooth hover animation without
+    affecting document layout.
+*/
 
 .links a {
     position: relative;
@@ -149,6 +185,9 @@
 }
 
 /* ---------- Right Side ---------- */
+/* =====================================================
+   USER ACTIONS
+   ===================================================== */
 
 .actions {
 
@@ -179,7 +218,11 @@
     transition:
         transform 0.25s ease;
 }
-
+/*
+    The rotation animation provides
+    immediate visual feedback when
+    switching themes.
+*/
 .themeButton:hover {
     transform: rotate(15deg);
 }
@@ -195,6 +238,9 @@
 }
 
 /* ---------- CTA Button ---------- */
+/* =====================================================
+   PRIMARY CALL-TO-ACTION
+   ===================================================== */
 
 .ctaButton {
 
@@ -229,7 +275,9 @@
     transform: translateY(-1px);
 }
 
-/* ---------- Animation ---------- */
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
 
 @keyframes slideDown {
 
@@ -242,7 +290,17 @@
     }
 }
 
-/* ---------- Responsive ---------- */
+/************************************************************
+   RESPONSIVE DESIGN
+*************************************************************/
+/*
+    Navigation links are hidden on
+    smaller screens.
+
+    Future enhancement:
+    Replace with a hamburger menu
+    and mobile navigation drawer.
+*/
 
 @media (max-width: 768px) {
 

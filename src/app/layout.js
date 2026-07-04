@@ -1,3 +1,23 @@
+/**
+ * ==========================================================
+ * Author       : Lakshit Tyagi
+ * Organization : Xebia
+ * Project      : Xebia Learning Management System (LMS)
+ * File         : src/app/layout.js
+ *
+ * Purpose:
+ * Defines the root layout for the entire application.
+ * This file wraps every page with global providers,
+ * metadata, styles, and common HTML structure.
+ *
+ * Responsibilities:
+ * - Imports global styles.
+ * - Configures application metadata.
+ * - Provides theme management using ThemeProvider.
+ * - Defines the root HTML and BODY elements.
+ * ==========================================================
+ */
+
 import "./globals.css";
 
 import { ThemeProvider }

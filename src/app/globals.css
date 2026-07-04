@@ -1,3 +1,23 @@
+/* ==========================================================
+   Author       : Lakshit Tyagi
+   Organization : Xebia
+   Project      : Xebia Learning Management System (LMS)
+   File         : src/app/globals.css
+
+   Purpose:
+   Defines application-wide styling, CSS variables,
+   theme configurations, typography, resets, and
+   reusable design tokens.
+
+   Responsibilities:
+   - Global CSS reset.
+   - Tailwind CSS integration.
+   - Light theme variables.
+   - Dark theme variables.
+   - Shared color palette and branding tokens.
+   - Application-wide typography and backgrounds.
+========================================================== */
+
 @import "tailwindcss";
 
 * {
@@ -52,6 +72,14 @@ body {
        ========================================== */
 
     /* --border-light: rgba(255, 255, 255, 0.5);*/   /*Will implement later */
+
+    /* ==========================================
+   TRANSITIONS
+   ========================================== */
+
+   --transition-fast: 0.25s ease;
+   --transition-medium: 0.4s ease;
+   --transition-slow: 0.6s ease;
 }
 
 /**********************************/

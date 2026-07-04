@@ -1,5 +1,31 @@
-import Image from "next/image";
+/**
+ * ==========================================================
+ * Author       : Lakshit Tyagi
+ * Organization : Xebia
+ * Project      : Xebia Learning Management System (LMS)
+ * File         : src/components/home/Home.jsx
+ *
+ * Purpose:
+ * Renders the public landing page of the application.
+ *
+ * Responsibilities:
+ * - Introduce the Xebia LMS platform.
+ * - Highlight key platform features.
+ * - Showcase enterprise success metrics.
+ * - Present customer testimonials.
+ * - Encourage user onboarding through
+ *   clear calls-to-action.
+ *
+ * Dependencies:
+ * - Next.js Image component for optimized assets.
+ * - React Icons for feature illustrations.
+ * - CSS Modules for component-scoped styling.
+ *
+ * ==========================================================
+ */
 
+import Image from "next/image";
+import Link from "next/link";
 import styles from "./Home.module.css";
 
 import {
@@ -8,12 +34,25 @@ import {
     FiLayers,
 } from "react-icons/fi";
 
+/**
+ * Home Component
+ *
+ * @returns {JSX.Element}
+ * A complete landing page consisting of:
+ * - Hero section
+ * - Platform statistics
+ * - Feature highlights
+ * - Customer testimonial
+ * - Final call-to-action
+ */
+
 export default function Home() {
 
     return (
         <>
 
-            {/* HERO */}
+            {/* Hero banner introducing the platform
+                and directing users toward primary actions. */}
             <section className={styles.heroSection}>
 
                 <div className={styles.heroOverlay}>
@@ -36,19 +75,19 @@ export default function Home() {
 
                     <div className={styles.heroButtons}>
 
-                        <a
+                        <Link
                             href="/login"
                             className={styles.primaryButton}
                         >
                             Get Started
-                        </a>
+                        </Link>
 
-                        <a
+                        <Link
                             href="/contact"
                             className={styles.secondaryButton}
                         >
                             Contact Us
-                        </a>
+                        </Link>
 
                     </div>
 
@@ -57,7 +96,8 @@ export default function Home() {
             </section>
 
 
-            {/* STATS */}
+            {/* High-level platform metrics used to
+                establish trust and social proof. */}
 
             <section className={styles.statsSection}>
 
@@ -79,7 +119,8 @@ export default function Home() {
             </section>
 
 
-            {/* FEATURES */}
+            {/* Core platform capabilities and
+                enterprise learning advantages. */}
 
             <section className={styles.featuresSection}>
 
@@ -105,7 +146,8 @@ export default function Home() {
 
                 </div>
 
-
+                {/* Each card represents a major pillar
+                    of the Xebia learning ecosystem. */}
                 <div className={styles.featureGrid}>
 
                     <div className={styles.featureCard}>
@@ -170,7 +212,8 @@ export default function Home() {
             </section>
 
 
-            {/* TESTIMONIAL */}
+            {/* Customer success story highlighting
+                measurable business impact. */}
 
             <section className={styles.testimonialSection}>
 
@@ -239,7 +282,8 @@ export default function Home() {
             </section>
 
 
-            {/* CTA */}
+            {/* Final conversion section encouraging
+                users to begin their learning journey. */}
 
             <section className={styles.ctaSection}>
 
@@ -258,19 +302,19 @@ export default function Home() {
 
                     <div className={styles.ctaButtons}>
 
-                        <a
+                        <Link
                             href="/login"
                             className={styles.primaryButton}
                         >
                             Get Started
-                        </a>
+                        </Link>
 
-                        <a
+                        <Link
                             href="/contact"
                             className={styles.secondaryButton}
                         >
                             Contact Sales
-                        </a>
+                        </Link>
 
                     </div>
 
